@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Email List</title>
+
+    <!-- VueJS -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+</head>
+
+<body>
+
+    <div id="app">
+        <button @click="generateMail">Genera Email</button>
+        <ul v-if="email.length === 10">
+            <li v-for="curEmail in email">{{curEmail}}</li>
+        </ul>
+        <p v-if="isLoading">Loading...</p>
+    </div>
+
+    <!-- Axios -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.8/axios.min.js"
+        integrity="sha512-PJa3oQSLWRB7wHZ7GQ/g+qyv6r4mbuhmiDb8BjSFZ8NZ2a42oTtAq5n0ucWAwcQDlikAtkub+tPVCw4np27WCg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
